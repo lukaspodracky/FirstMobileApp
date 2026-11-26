@@ -1,6 +1,22 @@
+import java.util.Base64
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+}
+
+// The signing key is also stored as base64 text (lightswitch.keystore.b64) so it
+// can be uploaded with text-only tools. Decode it when the binary file is missing.
+fun hobbyKeystore(): File {
+    val bin = file("lightswitch.keystore")
+    if (!bin.exists()) {
+        val b64 = file("lightswitch.keystore.b64").readText().filterNot { it.isWhitespace() }
+        val out = layout.buildDirectory.file("lightswitch.keystore").get().asFile
+        out.parentFile.mkdirs()
+        out.writeBytes(Base64.getDecoder().decode(b64))
+        return out
+    }
+    return bin
 }
 
 android {
@@ -21,7 +37,7 @@ android {
     // before publishing on Google Play.
     signingConfigs {
         create("hobby") {
-            storeFile = file("lightswitch.keystore")
+            storeFile = hobbyKeystore()
             storePassword = "android"
             keyAlias = "lightswitch"
             keyPassword = "android"

@@ -12,8 +12,8 @@ A simple logic game for Android, for kids (6+) and adults.
 
 ## Install on your phone
 
-1. On your Android phone, download [`apk/LightSwitch.apk`](apk/LightSwitch.apk)
-   (on GitHub open the file and tap **Download** / "View raw").
+1. Get `LightSwitch.apk` on your Android phone (sent in the Claude chat, or
+   build it yourself, see below).
 2. Open the downloaded file. If Android asks, allow your browser or file app to
    **install unknown apps**.
 3. Tap **Install**, then open **Light Switch**.
@@ -23,13 +23,16 @@ Requires Android 8.0 or newer.
 ## Build it yourself
 
 Needs JDK 17+ and the Android SDK (platform 35, build-tools 35.0.0).
+If `gradle/wrapper/gradle-wrapper.jar` is missing, recreate it once with
+`gradle wrapper --gradle-version 8.14.3`.
 
 ```bash
 ./gradlew assembleRelease          # -> app/build/outputs/apk/release/app-release.apk
 ./gradlew testDebugUnitTest        # level/solver tests + screenshots in app/build/screenshots
 ```
 
-The app is signed with `app/lightswitch.keystore`, a hobby key kept in the repo so
+The app is signed with a hobby key kept in the repo (`app/lightswitch.keystore`,
+also stored as text in `app/lightswitch.keystore.b64`) so
 new builds install as updates over the old one. Create a private key before
 publishing on Google Play.
 
