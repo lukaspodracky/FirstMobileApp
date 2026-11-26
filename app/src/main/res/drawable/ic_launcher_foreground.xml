@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- glow -->
+    <path android:fillColor="#40FFD43B"
+        android:pathData="M54,22a24,24 0,1 1,0 48a24,24 0,1 1,0 -48z" />
+    <!-- rays -->
+    <path android:fillColor="#FFD43B" android:pathData="M52.5,14h3v7h-3z" />
+    <path android:fillColor="#FFD43B" android:pathData="M28,44.5h7v3h-7z" />
+    <path android:fillColor="#FFD43B" android:pathData="M73,44.5h7v3h-7z" />
+    <path android:fillColor="#FFD43B" android:pathData="M33.6,25.7l2.1,-2.1l5,5l-2.1,2.1z" />
+    <path android:fillColor="#FFD43B" android:pathData="M74.4,25.7l-2.1,-2.1l-5,5l2.1,2.1z" />
+    <!-- bulb -->
+    <path android:fillColor="#FFD43B"
+        android:pathData="M54,30a16,16 0,1 1,0 32a16,16 0,1 1,0 -32z" />
+    <!-- shine -->
+    <path android:fillColor="#AAFFFFFF"
+        android:pathData="M48,37a3.5,3.5 0,1 1,0 7a3.5,3.5 0,1 1,0 -7z" />
+    <!-- cap -->
+    <path android:fillColor="#C9CCDD" android:pathData="M47,62h14v5h-14z" />
+    <path android:fillColor="#A0A4BC" android:pathData="M48,68h12v4h-12z" />
+    <path android:fillColor="#C9CCDD" android:pathData="M50,73h8v3h-8z" />
+</vector>
