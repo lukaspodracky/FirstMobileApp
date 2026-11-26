@@ -1,0 +1,8 @@
+<resources>
+    <color name="bg">#1B1F3B</color>
+    <color name="icon_bg">#1B1F3B</color>
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:colorAccent">#FFD43B</item>
+    </style>
+</resources>
